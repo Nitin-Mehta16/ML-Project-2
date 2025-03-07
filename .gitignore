@@ -1,5 +1,4 @@
 venv-project
-.gitignore
 
 # Byte-compiled / optgitimized / DLL files
 __pycache__/
