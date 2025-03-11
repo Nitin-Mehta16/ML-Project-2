@@ -41,6 +41,7 @@ What Does setup.py Do?
 
 ### Create logger.py
 ❓Why Configure Logging?
+
 😲By default, Python logs only to the console (stdout). We use logging.basicConfig() to: 
    1. ✅ Save logs to a file instead of just printing to the console.
    2. ✅ Define a clear log format for better debugging.
