@@ -41,9 +41,10 @@ What Does setup.py Do?
 
 ### Create logger.py
 ❓Why Configure Logging?
- By default, Python logs only to the console (stdout). We use logging.basicConfig() to: ✅ Save logs to a file instead of just printing to the console.
-   1. ✅ Define a clear log format for better debugging.
-   2. ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
+😲By default, Python logs only to the console (stdout). We use logging.basicConfig() to: 
+   1. ✅ Save logs to a file instead of just printing to the console.
+   2. ✅ Define a clear log format for better debugging.
+   3. ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
 
 ### 
 
