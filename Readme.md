@@ -1,11 +1,11 @@
 # End TO END MACHINE LEARNING PROJECT #
 
-### Creating environment using terminal
+## Creating environment using terminal
 conda create -p venv-project python==3.8 -y
 
 conda activate venv-project
 
-### Create setup.py & requirement.txt
+## Create setup.py & requirement.txt
 setup.py is the configuration file for packaging a Python project.
 
 Why is it needed?
@@ -28,7 +28,7 @@ What Does setup.py Do?
  1. By default, Python only looks for modules in certain directories (like the current folder, installed packages, and system paths).
  2. If your custom module (Python script or package) is outside these directories, Python won’t find it, and you will get an ImportError or ModuleNotFoundError.
 
-### Create exception.py
+## Create exception.py
 1. The Python sys module is imported to access sys.exc_info(), which retrieves details about the most recent exception.
 2. When an exception occurs, sys.exc_info() provides three pieces of information:
    _: Exception type (not used here).
@@ -40,7 +40,7 @@ What Does setup.py Do?
    The actual error message.
 4. The CustomExecption class is used to raise a structured exception message, making debugging easier.
 
-### Create logger.py
+## Create logger.py
 ❓Why Configure Logging?
 
 😲By default, Python logs only to the console (stdout). We use logging.basicConfig() to: 
@@ -48,7 +48,7 @@ What Does setup.py Do?
    2. ✅ Define a clear log format for better debugging.
    3. ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
 
-### 
+## 
 
 
 
