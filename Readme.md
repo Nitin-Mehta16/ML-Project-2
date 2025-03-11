@@ -40,10 +40,10 @@ What Does setup.py Do?
 4. The CustomExecption class is used to raise a structured exception message, making debugging easier.
 
 ### Create logger.py
-Why Configure Logging?
+❓Why Configure Logging?
  By default, Python logs only to the console (stdout). We use logging.basicConfig() to: ✅ Save logs to a file instead of just printing to the console.
-   ✅ Define a clear log format for better debugging.
-   ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
+   1. ✅ Define a clear log format for better debugging.
+   2. ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
 
 ### 
 
