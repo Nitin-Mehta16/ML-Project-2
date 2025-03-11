@@ -2,20 +2,21 @@
 
 ### Creating environment using terminal
 conda create -p venv-project python==3.8 -y
+
 conda activate venv-project
 
 ### Create setup.py & requirement.txt
 setup.py is the configuration file for packaging a Python project.
 
 Why is it needed?
- 1> Without setup.py, you cannot install your project as a package.
- 2> If you're creating a machine learning or software project that others will install, setup.py is necessary.
+ 1. Without setup.py, you cannot install your project as a package.
+ 2. If you're creating a machine learning or software project that others will install, setup.py is necessary.
 
 What Does setup.py Do?
- 1> Defines package name, version, and author.
- 2> Includes dependencies (install_requires).
- 3> Finds all sub-packages (find_packages()).  packages >> sub-packages >> collection of modules >> module >> sinlge python file >> functions, classes, variables.
- 4> Makes the project pip-installable.
+ 1. Defines package name, version, and author.
+ 2. Includes dependencies (install_requires).
+ 3. Finds all sub-packages (find_packages()).  packages >> sub-packages >> collection of modules >> module >> sinlge python file >> functions, classes, variables.
+ 4. Makes the project pip-installable.
 
 ❌ Without setup.py, You Must:
  1. Copy files manually to use them in another project.
