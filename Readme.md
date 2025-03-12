@@ -48,6 +48,27 @@ What Does setup.py Do?
    2. ✅ Define a clear log format for better debugging.
    3. ✅ Set the log level (INFO, WARNING, ERROR, etc.). If you want both WARNING and INFO logs, you need to set level=logging.INFO instead of level=logging.WARNING. INFO logs INFO, WARNING, ERROR, and CRITICAL messages.
 
+## Create Data_Ingestion.py
+1. Read/Import the data from data source.
+2. Split the data. 
+
+1️⃣ What is @dataclass?
+
+@dataclass is a built-in Python decorator from the dataclasses module that automatically generates special methods (like __init__(), __repr__(), and __eq__()) for a class, making it easier to create classes that primarily store data.
+
+2️⃣How @dataclass Helps?
+
+Normally, without @dataclass, we would have to manually define the __init__() method:
+
+<!-- class DataIngestionConfig:
+    def __init__(self):
+        self.train_data_path = os.path.join('artifact', 'train.csv')
+        self.test_data_path = os.path.join('artifact', 'test.csv')
+        self.raw_data_path = os.path.join('artifact', 'data.csv') -->
+
+With @dataclass, Python automatically generates this for us, making the code cleaner and easier to maintain.
+
+
 ## 
 
 
