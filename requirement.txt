@@ -3,4 +3,9 @@ pandas
 seaborn 
 matplotlib
 dill
--e .
+scikit-learn
+catboost
+xgboost
+flask
+
+#-e .

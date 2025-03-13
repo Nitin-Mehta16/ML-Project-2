@@ -10,7 +10,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-from src.exception import CustomExecption
+from src.exception import CustomException
 from src.logger import logging
 
 from src.utils import save_object
@@ -73,7 +73,7 @@ class DataTransformation:
             return full_pipeline
 
         except Exception as e:
-            raise CustomExecption(e,sys)
+            raise CustomException(e,sys)
         
     def initiate_data_transformtion(self,train_path,test_path):
         try:
@@ -87,11 +87,11 @@ class DataTransformation:
             target_column_name="math_score"
             numerical_columns = ["writing_score", "reading_score"]
             
-            logging.info("intizialiting input_feature and target_feature for TRAIN data ")            
+            logging.info("seperating input_feature and target_feature from TRAIN data ")            
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
 
-            logging.info("intizialiting input_feature and target_feature for TEST data ")
+            logging.info("seperating input_feature and target_feature from TEST data ")
             input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
             target_feature_test_df=test_df[target_column_name]
             
@@ -118,6 +118,6 @@ class DataTransformation:
             return train_data, test_data , self.transformation_config.preprocessor_obj_file_path
 
         except Exception as e:
-            raise CustomExecption(e,sys)
+            raise CustomException(e,sys)
         
             

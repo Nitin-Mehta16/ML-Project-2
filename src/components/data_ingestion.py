@@ -2,7 +2,7 @@
 
 import os 
 import sys 
-from src.exception import CustomExecption
+from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 
@@ -11,6 +11,9 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import TrainerConfig
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
@@ -58,14 +61,19 @@ class DataIngestion:
 
 
         except Exception as e  :
-            raise CustomExecption(e,sys)   
+            raise CustomException(e,sys)   
 
 
 
 if __name__ == "__main__":
     data_ingestion = DataIngestion()
     train_data , test_data = data_ingestion.initialize_data_ingestion()
+
     data_transformation = DataTransformation() # it will initiate "" self.transformation_config = DataTransformationConfig() ""
-    data_transformation.initiate_data_transformtion(train_data,test_data)
+    train_data_arr,test_data_arr,_ = data_transformation.initiate_data_transformtion(train_data,test_data)
+
+    model_trainer = ModelTrainer() # it will initiate "" self.TrainerConfig = TrainerConfig() ""
+    print( model_trainer.initiate_model_trainer(train_data_arr,test_data_arr) )
+
 
     
